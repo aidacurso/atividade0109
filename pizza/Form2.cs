@@ -14,10 +14,20 @@ namespace pizza
         {
             InitializeComponent();
             dataInformacoes.Rows.Add(new object[] {c.IdCliente, c.NomeCliente, c.TelefoneCliente});
+            
             dataPedido.Rows.Add(new object[] { p.IdPedido, p.Descricao, p.ValorTotal });
+
 
         }
 
-       
+        private void buttonCliente_Click(object sender, EventArgs e)
+        { 
+             dataInformacoes.Rows.Clear();
+        }
+
+        private void buttonPedido_Click(object sender, EventArgs e)
+        {
+            dataPedido.Rows.Clear();
+        }
     }
 }

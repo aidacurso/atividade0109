@@ -30,13 +30,15 @@ namespace pizza
         private void InitializeComponent()
         {
             this.dataInformacoes = new System.Windows.Forms.DataGridView();
-            this.colunaIdCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colunaNomeCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colunaTelefoneCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataPedido = new System.Windows.Forms.DataGridView();
             this.colunaIdentificadorPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colunaDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColunaValorTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonCliente = new System.Windows.Forms.Button();
+            this.buttonPedido = new System.Windows.Forms.Button();
+            this.colunaIdCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colunaNomeCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colunaTelefoneCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataInformacoes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataPedido)).BeginInit();
             this.SuspendLayout();
@@ -48,36 +50,13 @@ namespace pizza
             this.colunaIdCliente,
             this.colunaNomeCliente,
             this.colunaTelefoneCliente});
-            this.dataInformacoes.Location = new System.Drawing.Point(12, 12);
+            this.dataInformacoes.Location = new System.Drawing.Point(10, 9);
+            this.dataInformacoes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataInformacoes.Name = "dataInformacoes";
             this.dataInformacoes.RowHeadersWidth = 51;
             this.dataInformacoes.RowTemplate.Height = 29;
-            this.dataInformacoes.Size = new System.Drawing.Size(419, 426);
+            this.dataInformacoes.Size = new System.Drawing.Size(384, 320);
             this.dataInformacoes.TabIndex = 0;
-            // 
-            // colunaIdCliente
-            // 
-            this.colunaIdCliente.HeaderText = "Identificador do cliente";
-            this.colunaIdCliente.MinimumWidth = 6;
-            this.colunaIdCliente.Name = "colunaIdCliente";
-            this.colunaIdCliente.ReadOnly = true;
-            this.colunaIdCliente.Width = 125;
-            // 
-            // colunaNomeCliente
-            // 
-            this.colunaNomeCliente.HeaderText = "Nome do cliente";
-            this.colunaNomeCliente.MinimumWidth = 6;
-            this.colunaNomeCliente.Name = "colunaNomeCliente";
-            this.colunaNomeCliente.ReadOnly = true;
-            this.colunaNomeCliente.Width = 125;
-            // 
-            // colunaTelefoneCliente
-            // 
-            this.colunaTelefoneCliente.HeaderText = "Telefone do cliente";
-            this.colunaTelefoneCliente.MinimumWidth = 6;
-            this.colunaTelefoneCliente.Name = "colunaTelefoneCliente";
-            this.colunaTelefoneCliente.ReadOnly = true;
-            this.colunaTelefoneCliente.Width = 125;
             // 
             // dataPedido
             // 
@@ -86,11 +65,12 @@ namespace pizza
             this.colunaIdentificadorPedido,
             this.colunaDescricao,
             this.ColunaValorTotal});
-            this.dataPedido.Location = new System.Drawing.Point(481, 12);
+            this.dataPedido.Location = new System.Drawing.Point(612, 9);
+            this.dataPedido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataPedido.Name = "dataPedido";
             this.dataPedido.RowHeadersWidth = 51;
             this.dataPedido.RowTemplate.Height = 29;
-            this.dataPedido.Size = new System.Drawing.Size(422, 427);
+            this.dataPedido.Size = new System.Drawing.Size(389, 320);
             this.dataPedido.TabIndex = 1;
             // 
             // colunaIdentificadorPedido
@@ -114,13 +94,57 @@ namespace pizza
             this.ColunaValorTotal.Name = "ColunaValorTotal";
             this.ColunaValorTotal.Width = 125;
             // 
+            // buttonCliente
+            // 
+            this.buttonCliente.Location = new System.Drawing.Point(102, 334);
+            this.buttonCliente.Name = "buttonCliente";
+            this.buttonCliente.Size = new System.Drawing.Size(184, 23);
+            this.buttonCliente.TabIndex = 2;
+            this.buttonCliente.Text = "clique para excluir clientes";
+            this.buttonCliente.UseVisualStyleBackColor = true;
+            this.buttonCliente.Click += new System.EventHandler(this.buttonCliente_Click);
+            // 
+            // buttonPedido
+            // 
+            this.buttonPedido.Location = new System.Drawing.Point(733, 334);
+            this.buttonPedido.Name = "buttonPedido";
+            this.buttonPedido.Size = new System.Drawing.Size(160, 23);
+            this.buttonPedido.TabIndex = 3;
+            this.buttonPedido.Text = "clique para excluir pedidos";
+            this.buttonPedido.UseVisualStyleBackColor = true;
+            this.buttonPedido.Click += new System.EventHandler(this.buttonPedido_Click);
+            // 
+            // colunaIdCliente
+            // 
+            this.colunaIdCliente.HeaderText = "Identificador do cliente";
+            this.colunaIdCliente.MinimumWidth = 6;
+            this.colunaIdCliente.Name = "colunaIdCliente";
+            this.colunaIdCliente.Width = 125;
+            // 
+            // colunaNomeCliente
+            // 
+            this.colunaNomeCliente.HeaderText = "Nome do cliente";
+            this.colunaNomeCliente.MinimumWidth = 6;
+            this.colunaNomeCliente.Name = "colunaNomeCliente";
+            this.colunaNomeCliente.Width = 125;
+            // 
+            // colunaTelefoneCliente
+            // 
+            this.colunaTelefoneCliente.HeaderText = "Telefone do cliente";
+            this.colunaTelefoneCliente.MinimumWidth = 6;
+            this.colunaTelefoneCliente.Name = "colunaTelefoneCliente";
+            this.colunaTelefoneCliente.Width = 125;
+            // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(925, 451);
+            this.ClientSize = new System.Drawing.Size(1013, 395);
+            this.Controls.Add(this.buttonPedido);
+            this.Controls.Add(this.buttonCliente);
             this.Controls.Add(this.dataPedido);
             this.Controls.Add(this.dataInformacoes);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form2";
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.dataInformacoes)).EndInit();
@@ -132,13 +156,15 @@ namespace pizza
         #endregion
 
         private System.Windows.Forms.DataGridView dataInformacoes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colunaIdCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colunaNomeCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colunaTelefoneCliente;
         private System.Windows.Forms.DataGridView dataPedido;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdentificadorPedido;
         private System.Windows.Forms.DataGridViewTextBoxColumn colunaIdentificadorPedido;
         private System.Windows.Forms.DataGridViewTextBoxColumn colunaDescricao;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColunaValorTotal;
+        private System.Windows.Forms.Button buttonCliente;
+        private System.Windows.Forms.Button buttonPedido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colunaIdCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colunaNomeCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colunaTelefoneCliente;
     }
 }
